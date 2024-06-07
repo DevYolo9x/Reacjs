@@ -7,9 +7,11 @@ import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('main-content'));
 root.render(
-  <React.StrictMode>
+
+  // Tắt chê độ mode lặp lại các phần render 2 lần
+  // <React.StrictMode>
     <App />
-  </React.StrictMode>
+  // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

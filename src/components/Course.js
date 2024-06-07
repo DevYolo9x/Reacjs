@@ -13,6 +13,8 @@ class Course extends Component {
     this.handleClickThis = this.handleClickThis.bind(this);
     this.handleRegis = this.handleRegis.bind(this);
     this.handleToggle = this.handleToggle.bind(this);
+
+    this.usernameRef = React.createRef();
   }
 
   handleClick() {
@@ -28,7 +30,7 @@ class Course extends Component {
   }
 
   handleRegis(){
-    console.log(this.refs.username.value);
+    alert(this.usernameRef.current.value);
   }
 
   handleToggle(){
@@ -52,7 +54,7 @@ class Course extends Component {
             <div className="input-group-prepend">
               <button className="btn btn-primary" onClick={this.handleRegis}>Search</button>
             </div>
-            <input type="text" className="form-control" placeholder="Keyword..." ref="username" aria-label="Username" aria-describedby="basic-addon1" />
+            <input type="text" className="form-control" placeholder="Keyword..." ref={this.usernameRef} />
           </div>
 
           <div>
